@@ -1,0 +1,17 @@
+import random
+
+print("Bine ai venit la jocul 'Ghicește numărul'!")
+numar_secret = random.randint(1, 100)
+incercari = 0
+
+while True:
+    incercari += 1
+    guess = int(input("Ghicește numărul (1-100): "))
+
+    if guess < numar_secret:
+        print("Prea mic! Mai încearcă.")
+    elif guess > numar_secret:
+        print("Prea mare! Mai încearcă.")
+    else:
+        print(f"🎉 Ai ghicit numărul {numar_secret} în {incercari} încercări!")
+        break
